@@ -58,7 +58,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import button2 from '../assets/images/button2.png';
 import button3 from '../assets/images/button3.png';
-import section from '../assets/images/section.png';
+import section from '../assets/images/Section.png';
 
 const Hero = () => {
   return (
