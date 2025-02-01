@@ -1,36 +1,3 @@
-// import React from 'react'
-// import logo from '../assets/images/logo.png'
-// import button from '../assets/images/button.png'
-
-// const Header = () => {
-//   return (
-//     <div className='px-3 sm:px-8 py-2 border'>
-//         <div className='flex items-center justify-between'>
-//             <img src={logo} alt="logo" className='mr-2 w-[120px] h-[30px] md:w-[140px] md:h-[55.45px] bg-cover' />
-//             <div className='flex items-center gap-3 sm:gap-8'>
-//                 <div className='flex items-center gap-2 sm:gap-5 font-sans font-medium text-[16px] leading-[27.2px] text-black'>
-//                     <a>HOME</a>
-//                     <a>ABOUT</a>
-//                     <a>SERVICES</a>
-//                     <a>PRODUCTS</a>
-//                     <a>BLOG</a>
-//                     <a>CONTACT</a>
-//                 </div>
-//                 <img src={button} alt="img" className='w-[120px] md:w-[169.34px] md:h-[59.2px]' />
-
-//             </div>
-//         </div>
-//     </div>
-//   )
-// }
-
-// export default Header
-
-
-
-
-
-
 import React, { useState } from 'react';
 import { Menu, X } from 'lucide-react';
 import logo from '../assets/images/logo.png';
@@ -38,13 +5,19 @@ import button from '../assets/images/button.png';
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [isAnimating, setIsAnimating] = useState(false);
 
   const toggleMenu = () => {
+    setIsAnimating(true);
     setIsOpen(!isOpen);
+
+    setTimeout(() => {
+      setIsAnimating(false);
+    }, 300); // Match this duration with the animation time
   };
 
   return (
-    <div className="px-3 sm:px-8 py-2 mx-auto sticky top-0 bg-white z-50">
+    <div className="px-3 sm:px-8 py-2 mx-auto sticky top-0 bg-[rgba(249,249,249,1)] z-50">
       <div className="flex items-center justify-between">
         <img src={logo} alt="logo" className="w-[120px] h-[30px] md:w-[140px] md:h-[55px] mr-2" />
 
@@ -61,14 +34,17 @@ const Header = () => {
           <img src={button} alt="button" className="w-[120px] lg:w-[169px] h-[50px] lg:h-[59px] cursor-pointer" />
         </div>
 
-        {/* Mobile Icon */}
-        <div className="md:hidden cursor-pointer" onClick={toggleMenu}>
+        {/* Mobile Icon with Animation */}
+        <div 
+          className={`md:hidden cursor-pointer ${isAnimating ? 'animate-hamburger' : ''}`} 
+          onClick={toggleMenu}
+        >
           {isOpen ? <X size={28} /> : <Menu size={28} />}
         </div>
       </div>
 
       {/* Mobile Menu */}
-      {isOpen && (
+      {/* {isOpen && (
         <div className="md:hidden bg-white rounded-b-lg mt-2 p-4 space-y-4">
           <nav className="flex flex-col gap-4 font-sans font-medium text-[rgba(34,31,29,1)]">
             <a href="#" className="hover:text-blue-500">HOME</a>
@@ -80,7 +56,23 @@ const Header = () => {
           </nav>
           <img src={button} alt="button" className="w-[100px] h-auto cursor-pointer" />
         </div>
-      )}
+      )} */}
+
+      <div
+        className={`md:hidden overflow-hidden transition-all duration-300 ease-in-out ${
+          isOpen ? 'max-h-screen opacity-100' : 'max-h-0 opacity-0'
+        } bg-white rounded-b-lg px-4 space-y-4`}
+      >
+        <nav className="flex flex-col gap-4 font-sans font-medium text-[rgba(34,31,29,1)]">
+          <a href="#" className="hover:text-blue-500">HOME</a>
+          <a href="#" className="hover:text-blue-500">ABOUT</a>
+          <a href="#" className="hover:text-blue-500">SERVICES</a>
+          <a href="#" className="hover:text-blue-500">PRODUCTS</a>
+          <a href="#" className="hover:text-blue-500">BLOG</a>
+          <a href="#" className="hover:text-blue-500">CONTACT</a>
+        </nav>
+        <img src={button} alt="button" className="w-[100px] h-auto cursor-pointer" />
+      </div>
     </div>
   );
 };

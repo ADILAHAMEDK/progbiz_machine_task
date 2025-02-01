@@ -62,7 +62,7 @@ import section from '../assets/images/Section.png';
 
 const Hero = () => {
   return (
-    <div className='px-3 sm:px-8 mt:5 md:mt-9'>
+    <div className='px-3 sm:px-8 mt-2 md:mt-9'>
       <div>
         <motion.h1
           className='font-sans font-semibold text-[36px] md:text-[44px] lg:text-[64px] md:leading-[76px] text-[rgba(11,24,38,1)]'
