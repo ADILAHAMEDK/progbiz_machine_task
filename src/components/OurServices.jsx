@@ -98,7 +98,7 @@ const OurServices = () => {
   return (
     <div className="px-3 sm:px-8 mt-6 md:mt-20 lg:mt-25">
       <div className="md:flex justify-between gap-2 xl:gap-20">
-        {/* Left section (fixed) */}
+        {/* Left section fixed */}
         <div className="md:sticky md:top-0">
           <h4 className="text-[rgba(57,125,168,1)] font-sans font-medium text-[20px] leading-[34px]">OUR SERVICES</h4>
           <h1 className="sm:mt-1 lg:mt-2 font-sans font-medium text-[30px] leading-[30px] xl:text-[60px] xl:leading-[60px] text-[rgba(30,40,49,1)]">
@@ -114,9 +114,9 @@ const OurServices = () => {
           </div>
         </div>
 
-        {/* Right section (scrollable) */}
-        <div className="md:overflow-y-auto md:h-[80vh]">
-          <div className="mt-6 sm:mt-3">
+        {/* Right section scrollable */}
+        <div className="md:overflow-y-auto md:h-[80vh] scrollbar-hidden">
+          <div className="mt-6 sm:mt-2">
             {/* Service 1 */}
             <div className="sm:flex items-center xl:items-start gap-3">
               <img src={ac1} alt="img" className="w-full sm:w-[280px] md:w-[200px] xl:w-[272px] h-[303px]" />
@@ -136,7 +136,7 @@ const OurServices = () => {
 
             {/* Service 2 */}
             <div className="mt-5 sm:flex items-center xl:items-start gap-3">
-              <img src={ac2} alt="img" className="w-full sm:w-[280px] md:w-[200px] xl:w-[272px] h-[303px]" />
+              <img src={ac2} alt="img" className="w-full sm:w-[280px] md:w-[200px] xl:w-[272px] h-[303px] rounded-[10px]" />
               <div className="mt-2 sm:mt-0 xl:mt-5">
                 <h2 className="font-sans font-medium text-[24px] leading-[32.11px] text-[rgba(30,40,49,1)]">
                   Split Air Conditioning
