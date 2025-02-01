@@ -61,7 +61,7 @@ const Header = () => {
       <div
         className={`md:hidden overflow-hidden transition-all duration-300 ease-in-out ${
           isOpen ? 'max-h-screen opacity-100' : 'max-h-0 opacity-0'
-        } bg-white rounded-b-lg px-4 space-y-4`}
+        } bg-[rgba(249,249,249,1)] rounded-b-lg px-4 space-y-4`}
       >
         <nav className="flex flex-col gap-4 font-sans font-medium text-[rgba(34,31,29,1)]">
           <a href="#" className="hover:text-blue-500">HOME</a>
