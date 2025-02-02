@@ -22,7 +22,7 @@ const Achivements = () => {
 
         </div>
 
-        <div className='pl-3 sm:pl-8 mt-15 sm:mt-20 grid grid-cols-1 sm:grid-cols-3 gap-6 '>
+        <div className='px-3 sm:px-8 mt-15 sm:mt-20 grid grid-cols-1 sm:grid-cols-3 gap-6 '>
             <div className='px-5 py-10  sm:py-16 border rounded-[15px] relative'>
                 <span className='absolute -top-16 sm:-top-20 -left-1 font-sans font-[600] text-[20px] leading-[33px] text-[rgba(0,0,0,1)]'>2012</span>
                 <div className='relative'>
