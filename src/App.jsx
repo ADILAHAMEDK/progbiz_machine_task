@@ -5,6 +5,7 @@ import Header from './components/Header'
 import Hero from './components/Hero'
 import OurProducts from './components/OurProducts'
 import OurServices from './components/OurServices'
+import Testimonials from './components/Testimonials'
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
       <OurServices/>
       <Achivements/>
       <OurProducts/>
+      <Testimonials/>
       
     </div>
 
