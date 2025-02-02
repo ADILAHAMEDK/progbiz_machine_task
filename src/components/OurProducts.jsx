@@ -37,7 +37,7 @@ const OurProducts = () => {
 
                 <div className=''>
                 <img src={o5} alt="img" className='w-full h-[250px] sm:h-[300px] md:h-[372.79px]' />
-                <div className='mt-2 sm:mt-3 md:mt-8 flex items-center gap-2'>
+                <div className='mt-2 sm:mt-3 md:mt-8 mb-5 sm:mb-0 flex items-center gap-2'>
                     <h3 className='font-sans font-medium text-[18px] md:text-[24px] leading-[33.6px] text-[rgba(34,31,29,1)]'>Ice Makers</h3>
                     <img src={arrow2} alt="img" className='w-[16px] h-[16px] object-contain mt-1 md:mt-2' />
                 </div>
