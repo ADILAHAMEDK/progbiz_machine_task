@@ -33,7 +33,7 @@ const Testimonials = () => {
   ];
 
   return (
-    <div className="px-4 sm:px-8 border">
+    <div className="px-4 sm:px-8">
       <div className="text-start sm:text-left">
         <h4 className="text-[rgba(57,125,168,1)] font-sans font-medium text-lg sm:text-[20px] leading-[34px]">
           TESTIMONIALS
