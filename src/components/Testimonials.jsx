@@ -5,6 +5,7 @@ import man from '../assets/images/man.png';
 import man2 from '../assets/images/man2.png';
 import man3 from '../assets/images/man3.png';
 import star from '../assets/images/star.png';
+import ReactPlayer from 'react-player';
 
 
 const Testimonials = () => {
@@ -55,7 +56,37 @@ const Testimonials = () => {
       </div>
     </div>
   ))}
-</div> 
+</div>
+
+{/* <div className=" mt-5 h-[482px] shadow-lg rounded-lg overflow-hidden">
+      <ReactPlayer
+        className=""
+        url="https://youtu.be/nMDV58OjAbg?si=PzFDGTS4X2_ZQATj"
+        width="100%"
+        height="100%"
+        controls
+        onError={(e) => console.error('Error:', e)}
+      />
+    </div> */}
+
+<div className="mt-5 h-[20px] sm:h-[300px] md:h-[482px] shadow-lg rounded-lg overflow-hidden">
+  <ReactPlayer
+    url="https://youtu.be/nMDV58OjAbg?si=PzFDGTS4X2_ZQATj"
+    width="100%"
+    height="100%"
+    controls
+    config={{
+      youtube: {
+        playerVars: {
+          modestbranding: 1,
+        },
+      },
+    }}
+    onError={(e) => console.error('Error:', e)}
+  />
+</div>
+
+
 
 
     </div>
