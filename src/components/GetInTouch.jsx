@@ -1,7 +1,7 @@
 import React from "react";
 import ac from "../assets/images/ac.png";
 import b from "../assets/images/b.png";
-import icon from "../assets/images/icon.png";
+import icon from "../assets/images/i.png";
 import bb from "../assets/images/bb.png";
 
 const GetInTouch = () => {
