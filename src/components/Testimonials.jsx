@@ -69,19 +69,14 @@ const Testimonials = () => {
       />
     </div> */}
 
-<div className="mt-5 h-[20px] sm:h-[300px] md:h-[482px] shadow-lg rounded-lg overflow-hidden">
+<div className="mt-5 h-[200px] sm:h-[300px] md:h-[482px] shadow-lg rounded-lg overflow-hidden">
   <ReactPlayer
     url="https://youtu.be/nMDV58OjAbg?si=PzFDGTS4X2_ZQATj"
     width="100%"
     height="100%"
     controls
-    config={{
-      youtube: {
-        playerVars: {
-          modestbranding: 1,
-        },
-      },
-    }}
+    playing={true}
+    muted={true} 
     onError={(e) => console.error('Error:', e)}
   />
 </div>
