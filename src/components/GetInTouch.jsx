@@ -11,7 +11,7 @@ const GetInTouch = () => {
         <img src={ac} alt="img" className="w-full h-[750.86px] object-cover" />
         <div className=" px-3 md:pl-10 md:pr-30 absolute top-5 md:top-40 w-full flex flex-col lg:flex-row gap-2">
           {/* Left Column */}
-          <div className="lg:w-[50%] border px-5 lg:px-0">
+          <div className="lg:w-[50%]px-5 lg:px-0">
             <h4 className="font-sans font-medium text-[12px] leading-[26px] text-white">
               Get in touch now
             </h4>
