@@ -1,6 +1,7 @@
 import './App.css'
 import AboutUs from './components/AboutUs'
 import Achivements from './components/Achivements'
+import GetInTouch from './components/GetInTouch'
 import Header from './components/Header'
 import Hero from './components/Hero'
 import OurProducts from './components/OurProducts'
@@ -18,6 +19,7 @@ function App() {
       <Achivements/>
       <OurProducts/>
       <Testimonials/>
+      <GetInTouch/>
       
     </div>
 
